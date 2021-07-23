@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+
+
+    <body>
+        <!-- form -->
+        <div class="field">
+  <label class="label">Song Artist</label>
+  <div class="control">
+    <input class="input  song-artist" type="text" placeholder="Text input">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Title</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-success song-title" type="text" placeholder="Text input" value="">
+    <span class="icon is-small is-left">
+      <i class="fas fa-user"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Genre</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-danger song-genre" type="email" placeholder="Email input" value="">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-exclamation-triangle"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button onclick="submitSong()" class="button is-link">Submit</button>
+  </div>
+  <div class="control">
+    <button class="button is-link is-light" onclick="refreshSongs()">Get all</button>
+  </div>
+</div>
+
+    <!-- music library -->
+    <div class="container">
+        <div class="notification is-light">
+            <p class="title">Music Library</p>
+            <div class="columns song-card-container is-centered" >                
+
+            </div>
+        </div>
+    </div>
+
+        <script src="js/script.js"></script>
+  </body>
+</html>
